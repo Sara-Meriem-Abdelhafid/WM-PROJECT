@@ -1,0 +1,23 @@
+/* Reset page margins and center content */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: white;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* Make text adapt on smaller screens */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
