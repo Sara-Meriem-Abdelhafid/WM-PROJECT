@@ -22,7 +22,7 @@ header {
 /* --- Bottom Section (rectangle area) --- */
 .rectangle {
   flex: 1; /* takes 50% of height */
-  margin: 3px;
+  margin: 10px;
   background-color: rgba(255, 255, 255, 0.1); /* 10% transparent */
   border-radius: 10px;
 }
