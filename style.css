@@ -9,32 +9,77 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* --- Top Section (slogan area) --- */
-header {
-  flex: 1; /* takes 50% of height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* 🌟 Transparent Top Menu */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white */
+  backdrop-filter: blur(6px);
+  padding: 15px 0;
+  z-index: 10;
 }
 
-/* Text style */
-h1 {
-  font-size: 3rem;
-  text-align: center;
+.navbar ul {
+  list-style: none;
   margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;
+  gap: 40px; /* Space between links */
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #00bcd4;
+}
+
+/* 🌟 Main Content */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px; /* Push content below navbar */
+  position: relative;
 }
 
 /*3D Model transparent rectangle */
 /* --- Bottom Section (rectangle area) --- */
 .rectangle {
-  flex: 1; /* takes 50% of height */
-  margin: 10px;
-  background-color: rgba(255, 255, 255, 0.1); /* 10% transparent */
+  width: 90%;
+  height: 40vh;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+  margin: 20px;
+}
+
+
+/* Text style */
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* Responsive text */
 @media (max-width: 600px) {
+  .navbar ul {
+    gap: 20px;
+  }
   h1 {
     font-size: 2rem;
   }
