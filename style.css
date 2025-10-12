@@ -1,34 +1,37 @@
-/* Center everything */
+/* Full page setup */
 body {
   margin: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: linear-gradient(135deg, #1a1a1a, #333);
   color: white;
   font-family: "Segoe UI", Arial, sans-serif;
-  position: relative;
 }
 
+/* --- Top Section (slogan area) --- */
+header {
+  flex: 1; /* takes 50% of height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 /*3D Model transparent rectangle */
+/* --- Bottom Section (rectangle area) --- */
 .rectangle {
-  position: absolute;
-  top: 30px;
-  left: 3px;
-  right: 3px;
-  bottom: 3px;
-  background-color: rgba(255, 255, 255, 0.1); /* 10% transparent light overlay */
+  flex: 1; /* takes 50% of height */
+  margin: 3px;
+  background-color: rgba(255, 255, 255, 0.1); /* 10% transparent */
   border-radius: 10px;
-  z-index: 0; /* stays behind the text */
 }
 
 /* Text style */
 h1 {
   font-size: 3rem;
   text-align: center;
-  z-index: 1; /* ensures text appears above the rectangle */
+  margin: 0;
 }
 
 /* Responsive text */
