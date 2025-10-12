@@ -17,6 +17,12 @@ header {
   justify-content: center;
 }
 
+/* Text style */
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+}
 
 /*3D Model transparent rectangle */
 /* --- Bottom Section (rectangle area) --- */
@@ -25,13 +31,6 @@ header {
   margin: 10px;
   background-color: rgba(255, 255, 255, 0.1); /* 10% transparent */
   border-radius: 10px;
-}
-
-/* Text style */
-h1 {
-  font-size: 3rem;
-  text-align: center;
-  margin: 0;
 }
 
 /* Responsive text */
