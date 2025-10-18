@@ -4,31 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="Styles/style.css" />
     <title>Wassim El Madina Bridge</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-      <nav class="navbar">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- Main Content -->
-    <div class="content">
-      <h1>Wassim El Madina Bridge</h1>
-      <div class="rectangle">
-        <model-viewer
-          src="get started with blender array2.glb"
-          alt="3D model"
-          camera-controls
-          auto-rotate
-          shadow-intensity="1"
-          environment-image="neutral"
-        ></model-viewer>
-      </div>
-    </div>
+
+    
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Dynamic page content -->
+    <iframe id="contentFrame" src="HTML/home.html"></iframe>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    
+    <script src="JS/header-footer.js"></script>
+    <script src="JS/main.js"></script>
   </body>
 </html>

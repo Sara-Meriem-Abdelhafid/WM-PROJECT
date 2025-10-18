@@ -1,0 +1,172 @@
+/* 🌐 General Page Style */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: white;
+  font-family: "Segoe UI", Arial, sans-serif;  
+  overflow-x: hidden;
+
+}
+
+/* --- Header (top menu) --- */
+header.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers the menu */
+  padding: 0 40px;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  box-sizing: border-box; /* ensures padding doesn't break width */
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  left: 40px;
+  height: 45px;
+}
+
+/* Menu layout */
+.menu {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Menu links */
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.menu a:hover {
+  color: #00bcd4; 
+  transform: scale(1.05);
+}
+
+/* --- Main Content --- */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers vertically */
+  align-items: center; /* centers horizontally */
+  text-align: center;
+  padding-top: 100px; /* space from top bar */
+  padding-bottom: 80px; /* space from footer */
+  box-sizing: border-box;
+}
+
+/* Title */
+.content h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+
+/* --- 3D Model Section --- */
+.rectangle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 50vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/*3D Model transparent rectangle */
+/* --- Bottom Section (rectangle area) ---
+.rectangle {
+  flex: 1;
+  width: 100%;
+  height: 40vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  margin: 100px,50px,100px,50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}*/
+
+model-viewer {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+
+
+footer.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  font-size: 0.9rem;
+  color: white;
+  z-index: 10;
+}
+
+
+/* --- Embedded Pages --- */
+iframe {
+  border: none;
+  flex: 1;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+/* Responsive (for phones) */
+@media (max-width: 600px) {
+   header.top-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .rectangle {
+    width: 95%;
+    height: 35vh;
+  }
+}
