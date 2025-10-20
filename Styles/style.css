@@ -9,9 +9,10 @@ body {
   background: linear-gradient(135deg, #1a2980, #26d0ce, #00bcd4);
   background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4);
   background: linear-gradient(135deg, #2193b0, #6dd5ed, #00bcd4);
-  background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4);
-  background: linear-gradient(135deg, #141E30, #243B55, #00bcd4);*/
-  background: linear-gradient(135deg, #141E30, #243B55, #1a2980, #243B55, #141E30);
+  background: linear-gradient(135deg, #141E30, #243B55, #00bcd4);
+  background: linear-gradient(135deg, #141E30, #243B55, #00bcd4, #243B55, #141E30);*/
+  background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4, #203a43, #0f2027);
+
   background-size: 400% 400%;
   animation: gradientLoop 20s ease-in-out infinite;
   color: white;
@@ -48,32 +49,35 @@ header.top-bar {
 }
 
 /* Logo */
-.logo {
-  /*position: absolute;
-  font-weight: bold;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  color: white;*/
+
+.top-bar .logo {
   position: absolute;
   left: 40px;
+  /*top: 50%;*/
+  transform: uppercase;
   display: flex;
-  flex-direction: column; /* stack text vertically */
+  flex-direction: column;  /*stack text vertically */
   align-items: flex-start; /* align to left edge */
   justify-content: center;
-  line-height: 1.2;
+  line-height: 1.1;
   color: white;
   font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.9rem, 1.5vw + 0.3rem, 1.8rem);
+  letter-spacing: 1px;
+  white-space: nowrap;
+  /*text-transform: translateY(-50%);*/
 }
 
 .logo .line1 {
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #ffffff;
 }
 
 .logo .line2 {
-  font-size: 1.5rem;
-  color: #00bcd4;
+  font-size: 0.9rem;
+  font-weight: 550;
+  color: #333;
 }
 /* Menu layout */
 .menu {
