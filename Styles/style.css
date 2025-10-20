@@ -4,14 +4,14 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  /*background: linear-gradient(135deg, #1a1a1a, #333);*/
-  /*background: linear-gradient(135deg, #0A3D62, #00bcd4);*/
-  /*background: linear-gradient(135deg, #1a2980, #26d0ce, #00bcd4);*/
-  /*background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4);*/
-  /*background: linear-gradient(135deg, #2193b0, #6dd5ed, #00bcd4);*/
-  /*background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4);*/
-  background: linear-gradient(135deg, #141E30, #243B55, #00bcd4, #243B55, #141E30);
-  /*background: linear-gradient(135deg, #141E30, #243B55, #00bcd4);*/
+  /*background: linear-gradient(135deg, #1a1a1a, #333);
+  background: linear-gradient(135deg, #0A3D62, #00bcd4);
+  background: linear-gradient(135deg, #1a2980, #26d0ce, #00bcd4);
+  background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4);
+  background: linear-gradient(135deg, #2193b0, #6dd5ed, #00bcd4);
+  background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4);
+  background: linear-gradient(135deg, #141E30, #243B55, #00bcd4);*/
+  background: linear-gradient(135deg, #141E30, #243B55, #1a2980, #243B55, #141E30);
   background-size: 400% 400%;
   animation: gradientLoop 20s ease-in-out infinite;
   color: white;
