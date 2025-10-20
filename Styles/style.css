@@ -4,11 +4,30 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #1a1a1a, #333);
+  /*background: linear-gradient(135deg, #1a1a1a, #333);*/
+  /*background: linear-gradient(135deg, #0A3D62, #00bcd4);*/
+  /*background: linear-gradient(135deg, #1a2980, #26d0ce, #00bcd4);*/
+  /*background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4);*/
+  /*background: linear-gradient(135deg, #2193b0, #6dd5ed, #00bcd4);*/
+  /*background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4);*/
+  background: linear-gradient(135deg, #141E30, #243B55, #00bcd4, #243B55, #141E30);
+  /*background: linear-gradient(135deg, #141E30, #243B55, #00bcd4);*/
+  background-size: 400% 400%;
+  animation: gradientLoop 20s ease-in-out infinite;
   color: white;
-  font-family: "Segoe UI", Arial, sans-serif;  
+  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
-
+}
+@keyframes gradientLoop {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* --- Header (top menu) --- */
@@ -30,11 +49,32 @@ header.top-bar {
 
 /* Logo */
 .logo {
+  /*position: absolute;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: white;*/
   position: absolute;
   left: 40px;
-  height: 45px;
+  display: flex;
+  flex-direction: column; /* stack text vertically */
+  align-items: flex-start; /* align to left edge */
+  justify-content: center;
+  line-height: 1.2;
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
+.logo .line1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.logo .line2 {
+  font-size: 1.5rem;
+  color: #00bcd4;
+}
 /* Menu layout */
 .menu {
   display: flex;
@@ -113,9 +153,7 @@ model-viewer {
   border-radius: 10px;
 }
 
-
-
-footer.bottom-bar {
+footer.site-footer {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -127,7 +165,6 @@ footer.bottom-bar {
   color: white;
   z-index: 10;
 }
-
 
 /* --- Embedded Pages --- */
 iframe {
@@ -169,4 +206,44 @@ iframe {
     width: 95%;
     height: 35vh;
   }
+}
+
+
+
+/*###############################################################################################################################*/
+/* --- Page Text and Layouts --- */
+.page-text {
+  font-size: 1.2rem;
+  color: #ddd;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+/* Project Grid */
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  background: rgba(0, 188, 212, 0.2);
+}
+
+/* Contact Info */
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #ccc;
 }
