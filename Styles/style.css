@@ -1,9 +1,9 @@
 /* 🌐 General Page Style */
 body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  margin: 0; /* Remove default browser margins to make the layout flush with the edges */
+  height: 100vh; /* Make the body take up the full viewport height */
+  display: flex; /* Enable flexbox layout for easy vertical stacking of elements */
+  flex-direction: column; /* Stack child elements (header, content, footer) vertically */
   /*background: linear-gradient(135deg, #1a1a1a, #333);
   background: linear-gradient(135deg, #0A3D62, #00bcd4);
   background: linear-gradient(135deg, #1a2980, #26d0ce, #00bcd4);
@@ -11,150 +11,140 @@ body {
   background: linear-gradient(135deg, #2193b0, #6dd5ed, #00bcd4);
   background: linear-gradient(135deg, #141E30, #243B55, #00bcd4);
   background: linear-gradient(135deg, #141E30, #243B55, #00bcd4, #243B55, #141E30);*/
-  background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4, #203a43, #0f2027);
-
-  background-size: 400% 400%;
-  animation: gradientLoop 20s ease-in-out infinite;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
+  /* 🎨 Animated gradient background */
+  /*background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4, #203a43, #0f2027);/* Direction of the gradient (diagonal) */  
+  background: linear-gradient(135deg, #0f2027, #203a43, #4fc3f7, #203a43, #0f2027);/* Direction of the gradient (diagonal) */  
+  background-size: 500% 500%; /* Make the background 5x larger for smooth animation movement */
+  animation: gradientLoop 20s ease-in-out infinite;  /*- Duration: 20 seconds per cycle - Timing: ease-in-out for smooth transitions*/
+  color: white; /* Default text color across the site */
+  font-family: 'Poppins', sans-serif;/* Clean, modern font with sans-serif fallback */
+  overflow-x: hidden; /* Prevent horizontal scrolling caused by animation shifts */
 }
 @keyframes gradientLoop {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 50%; /* The gradient starts positioned at the left side (0%) horizontally and centered vertically (50%). */
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 50%; /* The gradient has now fully moved to the right side (100%) while staying vertically centered (50%). */
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 50%; /* The gradient returns to its starting point on the left (0%) to create a seamless infinite loop. */
   }
 }
 
 /* --- Header (top menu) --- */
 header.top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center; /* centers the menu */
-  padding: 0 40px;
-  backdrop-filter: blur(10px);
-  z-index: 10;
-  box-sizing: border-box; /* ensures padding doesn't break width */
+  position: fixed; /* Keeps the header fixed at the top while scrolling */
+  top: 0; /* Positions it at the very top of the page */
+  left: 0; /* Aligns it to the left edge */
+  width: 100%; /* Makes the header span the full width of the screen */
+  height: 50px; /* Sets the height of the header */
+  /*background: rgba(255, 255, 255, 0.1);*/ /* Optional semi-transparent background */
+  display: flex; /* Uses Flexbox for screen size changes layout */ 
+  align-items: center; /* Vertically centers content inside the header */
+  justify-content: center; /* Horizontally centers the menu */
+  padding: 40px 40px; /* Adds horizontal spacing inside the header */
+  backdrop-filter: blur(10px); /* Adds a frosted-glass blur effect */
+  z-index: 10; /* Ensures the header stays above other elements */
+  box-sizing: border-box; /* Includes padding in total width/height */
 }
 
 /* Logo */
-
 .top-bar .logo {
-  position: absolute;
-  left: 40px;
-  /*top: 50%;*/
-  transform: uppercase;
-  display: flex;
-  flex-direction: column;  /*stack text vertically */
-  align-items: flex-start; /* align to left edge */
-  justify-content: center;
-  line-height: 1.1;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(0.9rem, 1.5vw + 0.3rem, 1.8rem);
-  letter-spacing: 1px;
-  white-space: nowrap;
-  /*text-transform: translateY(-50%);*/
+  position: absolute; /* Places the logo independently inside the header */
+  left: 7%; /* Positions it 40px from the left edge */
+  right: 2%; /* Keeps some space from the right edge (optional) */
+  top: 27%; /* Positions it 10px from the top edge */
+  /*text-transform: uppercase; /* Invalid CSS (should be text-transform: uppercase if needed) */
+  /*display: flex; /* Uses Flexbox for arranging text lines */
+  flex-direction: column; /* Stacks "Wassim" and "El Madina" vertically */
+  align-items: flex-start; /* Aligns text to the left side */
+  justify-content: center; /* Centers the text vertically within its box */
+  line-height: 1.2; /* Sets compact spacing between the two lines */
+  /*color: white; /* Sets the text color to white */
+  font-family: 'Poppins', sans-serif; /* Uses a clean, modern font */
+  font-size: clamp(0.9rem, 1vw + 0.1rem, 1.2rem); /* Responsive font scaling with screen width */
+  letter-spacing: 1px; /* Slightly increases space between letters */
+  white-space: nowrap; /* Prevents the text from wrapping to another line */
+  pointer-events: none; /* Ensures logo doesn’t block menu item clicks */
+  /* text-transform: uppercase translateY(-50%); */ /* Incorrect syntax; should be split if used */
 }
 
+/* --- Logo text lines --- */
 .logo .line1 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-weight: 700; /* Makes "Wassim" bold for emphasis */
+  color: #ffffff; /* Sets text color to white for visibility */
 }
 
 .logo .line2 {
-  font-size: 0.9rem;
-  font-weight: 550;
-  color: #333;
+  font-weight: 600; /* Slightly lighter weight for "El Madina" */
+  color: #333; /* Dark gray to create a soft contrast */
 }
+
+
 /* Menu layout */
 .menu {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Uses Flexbox to arrange links horizontally */
+  gap: 40px; /* Adds 40px spacing between each menu link */
+  justify-content: center; /* Centers menu links horizontally */
+  align-items: center; /* Vertically aligns links in the middle */
 }
 
 /* Menu links */
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s, transform 0.2s;
+.menu a {color: white; /* White text color for contrast on dark backgrounds */
+  text-decoration: none; /* Removes underline from links */
+  font-weight: 600; /* Medium boldness for professional look */
+  font-size: 1rem; /* Sets readable, consistent link size */
+  transition: color 0.5s, transform 0.3s; /* Smooth hover animation for color and size */
 }
 
+/* --- Hover effect for links --- */
 .menu a:hover {
-  color: #00bcd4; 
-  transform: scale(1.05);
+  color: #00bcd4; /* Changes color to cyan on hover for interactivity */
+  transform: scale(1.05); /* Slightly enlarges link for a dynamic feel */
 }
 
-/* --- Main Content --- */
+/* --- Main Content Section --- */
 .content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centers vertically */
-  align-items: center; /* centers horizontally */
-  text-align: center;
-  padding-top: 100px; /* space from top bar */
-  padding-bottom: 80px; /* space from footer */
-  box-sizing: border-box;
+  flex: 1; /* Takes up all available vertical space between header & footer */
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: column; /* Stacks content vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  text-align: center; /* Centers text inside the section */
+  padding-top: 50px; /* Creates space below the fixed top bar */
+  padding-bottom: 50px; /* Adds space above the footer */
+  box-sizing: border-box; /* Includes padding in total height */
 }
 
-/* Title */
+/* --- Title Style --- */
 .content h1 {
-  font-size: 3rem;
-  color: white;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-  text-align: center;
+  font-size: 3rem; /* Large, clear title */
+  color: white; /* Bright text for dark backgrounds */
+  margin-bottom: 40px; /* Space between title and 3D model */
+  letter-spacing: 1px; /* Slight spacing for modern look */
+  text-align: center; /* Keeps the title perfectly centered */
 }
 
 
-/* --- 3D Model Section --- */
+/* --- 3D Model Display Section --- */
 .rectangle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 95%;
-  height: 50vh;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 25px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+  display: flex; /* Uses Flexbox to center the 3D model inside */
+  justify-content: center; /* Horizontally centers the model */
+  align-items: center; /* Vertically centers the model */
+  width: 95%; /* Makes the container take 95% of the page width */
+  height: 70vh; /* Sets the height to 50% of the viewport height */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for contrast */
+  border-radius: 25px; /* Smooth, rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adds depth with a soft shadow */
+  overflow: hidden; /* Prevents 3D model from overflowing outside the box */
 }
 
-/*3D Model transparent rectangle */
-/* --- Bottom Section (rectangle area) ---
-.rectangle {
-  flex: 1;
-  width: 100%;
-  height: 40vh;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 25px;
-  margin: 100px,50px,100px,50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}*/
-
+/* --- 3D Model Viewer Styling --- */
 model-viewer {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  width: 100%; /* Makes the 3D model fill the full width of its container */
+  height: 100%; /* Makes it fill the full height of the container */
+  border-radius: 10px; /* Slightly rounds the model’s edges to match the container’s style */
 }
 
 footer.site-footer {
@@ -193,9 +183,11 @@ iframe {
   }
 
   .menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    /* flex-wrap: wrap; */
+    justify-content: flex-end; /* Keep menu to the right on small screens */
+    gap: 20px; /* Smaller gaps for mobile */
+    margin-left:  25%; /* Less side margin */
+
   }
 
   .menu a {
