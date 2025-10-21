@@ -1,4 +1,6 @@
-/* 🌐 General Page Style */
+/* =========================================================
+ 🌐 GENERAL PAGE STYLES
+========================================================= */
 body {
   margin: 0; /* Remove default browser margins to make the layout flush with the edges */
   height: 100vh; /* Make the body take up the full viewport height */
@@ -20,19 +22,17 @@ body {
   font-family: 'Poppins', sans-serif;/* Clean, modern font with sans-serif fallback */
   overflow-x: hidden; /* Prevent horizontal scrolling caused by animation shifts */
 }
+
+/* --- Animated Background --- */
 @keyframes gradientLoop {
-  0% {
-    background-position: 0% 50%; /* The gradient starts positioned at the left side (0%) horizontally and centered vertically (50%). */
-  }
-  50% {
-    background-position: 100% 50%; /* The gradient has now fully moved to the right side (100%) while staying vertically centered (50%). */
-  }
-  100% {
-    background-position: 0% 50%; /* The gradient returns to its starting point on the left (0%) to create a seamless infinite loop. */
-  }
+  0% {background-position: 0% 50%; /* The gradient starts positioned at the left side (0%) horizontally and centered vertically (50%). */}
+  50% {background-position: 100% 50%; /* The gradient has now fully moved to the right side (100%) while staying vertically centered (50%). */}
+  100% {background-position: 0% 50%; /* The gradient returns to its starting point on the left (0%) to create a seamless infinite loop. */}
 }
 
-/* --- Header (top menu) --- */
+/* =========================================================
+ 🧭 HEADER & NAVIGATION
+========================================================= */
 header.top-bar {
   position: fixed; /* Keeps the header fixed at the top while scrolling */
   top: 0; /* Positions it at the very top of the page */
@@ -81,8 +81,7 @@ header.top-bar {
   color: #333; /* Dark gray to create a soft contrast */
 }
 
-
-/* Menu layout */
+/* --- Menu Layout --- */
 .menu {
   display: flex; /* Uses Flexbox to arrange links horizontally */
   gap: 40px; /* Adds 40px spacing between each menu link */
@@ -90,7 +89,7 @@ header.top-bar {
   align-items: center; /* Vertically aligns links in the middle */
 }
 
-/* Menu links */
+/* --- Menu Links --- */
 .menu a {color: white; /* White text color for contrast on dark backgrounds */
   text-decoration: none; /* Removes underline from links */
   font-weight: 600; /* Medium boldness for professional look */
@@ -104,7 +103,10 @@ header.top-bar {
   transform: scale(1.05); /* Slightly enlarges link for a dynamic feel */
 }
 
-/* --- Main Content Section --- */
+
+/* =========================================================
+ 🧩 MAIN CONTENT
+========================================================= */
 .content {
   flex: 1; /* Takes up all available vertical space between header & footer */
   display: flex; /* Enables Flexbox layout */
@@ -117,7 +119,7 @@ header.top-bar {
   box-sizing: border-box; /* Includes padding in total height */
 }
 
-/* --- Title Style --- */
+/* --- Page  Title  --- */
 .content h1 {
   font-size: 3rem; /* Large, clear title */
   color: white; /* Bright text for dark backgrounds */
@@ -127,7 +129,9 @@ header.top-bar {
 }
 
 
-/* --- 3D Model Display Section --- */
+/* =========================================================
+ 🌀 3D MODEL SECTION
+========================================================= */
 .rectangle {
   display: flex; /* Uses Flexbox to center the 3D model inside */
   justify-content: center; /* Horizontally centers the model */
@@ -140,106 +144,120 @@ header.top-bar {
   overflow: hidden; /* Prevents 3D model from overflowing outside the box */
 }
 
-/* --- 3D Model Viewer Styling --- */
+/* --- 3D Model Viewer --- */
 model-viewer {
   width: 100%; /* Makes the 3D model fill the full width of its container */
   height: 100%; /* Makes it fill the full height of the container */
   border-radius: 10px; /* Slightly rounds the model’s edges to match the container’s style */
 }
 
+
+/* =========================================================
+ ⚓ FOOTER
+========================================================= */
 footer.site-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  text-align: center;
-  padding: 10px;
-  backdrop-filter: blur(10px);
-  font-size: 0.9rem;
-  color: white;
-  z-index: 10;
+  position: fixed; /* Keeps the footer always visible at the bottom of the screen */
+  bottom: 0; /* Anchors it to the bottom edge */
+  width: 100%; /* Stretches the footer across the full page width */
+  background: rgba(255, 255, 255, 0.1); /* Adds a transparent white background for a glassy look */
+  text-align: center; /* Centers the footer text horizontally */
+  padding: 10px; /* Adds inner space for breathing room */
+  backdrop-filter: blur(10px); /* Creates a blur effect for a modern frosted-glass style */
+  font-size: 0.9rem; /* Slightly smaller text for a clean, subtle appearance */
+  color: white; /* White text for readability on dark backgrounds */
+  z-index: 10; /* Ensures the footer stays above background or model layers */ 
 }
 
-/* --- Embedded Pages --- */
+
+/* =========================================================
+ 📄 EMBEDDED PAGES (IFRAME)
+========================================================= */
 iframe {
-  border: none;
-  flex: 1;
-  margin-top: 70px;
-  margin-bottom: 60px;
-  width: 100%;
+  border: none; /* Removes the default border around the iframe for a cleaner look */
+  flex: 1; /* Allows the iframe to expand and fill available vertical space in the layout */
+  margin-top: 70px; /* Adds space at the top to avoid overlapping with the fixed header */
+  margin-bottom: 60px; /* Adds space at the bottom to prevent overlap with the footer */
+  width: 100%; /* Makes the iframe stretch across the full page width */
 }
 
-/* Responsive (for phones) */
-@media (max-width: 600px) {
-   header.top-bar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 20px;
+
+/* =========================================================
+ 📱 RESPONSIVE DESIGN (MOBILE)
+========================================================= */
+@media (max-width: 600px) { /* Applies these styles only when screen width is 600px or less */
+  
+  header.top-bar {
+    flex-direction: column; /* Stacks logo and menu vertically instead of side-by-side */
+    height: auto; /* Allows height to adjust based on content */
+    padding: 10px 20px; /* Adds smaller, consistent padding for compact layout */
   }
 
   .logo {
-    position: static;
-    margin-bottom: 10px;
+    position: static; /* Removes absolute positioning so it flows naturally in the column layout */
+    margin-bottom: 10px; /* Adds small space between logo and menu */
   }
 
   .menu {
-    /* flex-wrap: wrap; */
-    justify-content: flex-end; /* Keep menu to the right on small screens */
-    gap: 20px; /* Smaller gaps for mobile */
-    margin-left:  25%; /* Less side margin */
-
+    /* flex-wrap: wrap; */   /* (Commented) could allow menu items to wrap if needed */
+    justify-content: flex-end; /* Moves menu links to the right side for a modern mobile look */
+    gap: 20px; /* Reduces spacing between menu items for smaller screens */
+    margin-left: 25%; /* Centers or slightly shifts the menu based on design preference */
   }
 
   .menu a {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Slightly smaller font size for better fit on mobile screens */
   }
 
   .content h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Reduces heading size for better balance on small screens */
   }
 
   .rectangle {
-    width: 95%;
-    height: 35vh;
+    width: 95%; /* Keeps model container nearly full width */
+    height: 35vh; /* Shortens height to fit smaller viewports */
   }
 }
 
-
-
 /*###############################################################################################################################*/
-/* --- Page Text and Layouts --- */
+
+/* =========================================================
+ 💬 PAGE TEXT & PROJECTS
+========================================================= */
 .page-text {
-  font-size: 1.2rem;
-  color: #ddd;
-  max-width: 800px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
+  font-size: 1.2rem; /* Sets a slightly larger font size for comfortable reading */
+  color: #ddd; /* Uses a soft light gray color to contrast against dark backgrounds */
+  max-width: 800px; /* Restricts the paragraph width for better readability on large screens */
+  margin: 0 auto 40px; /* Centers the text block (auto left/right) and adds space below */
+  line-height: 1.6; /* Increases space between lines for easier reading */
 }
-/* Project Grid */
+
+/* --- Projects Grid --- */
 .projects-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  display: flex; /* Uses Flexbox to arrange child elements (project items) in a row */
+  justify-content: center; /* Centers all project items horizontally within the container */
+  gap: 30px; /* Adds 30px of space between each project item */
+  flex-wrap: wrap; /* Allows items to move to a new line if there’s not enough horizontal space */
 }
 
+/* --- Individual Project Card --- */
 .project-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px 30px;
-  border-radius: 12px;
-  font-weight: 600;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s, background 0.3s;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background for a glassy look */
+  padding: 20px 30px; /* Adds inner spacing: 20px top/bottom, 30px left/right */
+  border-radius: 12px; /* Rounds the corners of the card */
+  font-weight: 600; /* Makes the text slightly bold */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Adds a soft shadow for depth */
+  transition: transform 0.3s, background 0.3s; /* Smooth animation when hovering (scale or background changes) */
 }
 
+/* --- Hover Effect for Project Cards --- */
 .project-card:hover {
-  transform: scale(1.05);
-  background: rgba(0, 188, 212, 0.2);
+  transform: scale(1.05); /* Slightly enlarges the card on hover to attract attention */
+  background: rgba(0, 188, 212, 0.2); /* Changes background to a light cyan tint for interactivity */
 }
 
-/* Contact Info */
+/* --- Contact Info --- */
 .contact-info p {
-  margin: 10px 0;
-  font-size: 1.1rem;
-  color: #ccc;
+  margin: 10px 0; /* Adds vertical spacing between each line of contact info */
+  font-size: 1.1rem; /* Sets a readable font size slightly larger than normal text */
+  color: #ccc; /* Uses a soft gray color for a clean, subtle appearance */
 }
