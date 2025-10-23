@@ -3,21 +3,12 @@
 ========================================================= */
 body {
   margin: 0; /* Remove default browser margins to make the layout flush with the edges */
-  height: 100vh; /* Make the body take up the full viewport height */
-  display: flex; /* Enable flexbox layout for easy vertical stacking of elements */
-  flex-direction: column; /* Stack child elements (header, content, footer) vertically */
-  /*background: linear-gradient(135deg, #1a1a1a, #333);
-  background: linear-gradient(135deg, #0A3D62, #00bcd4);
-  background: linear-gradient(135deg, #1a2980, #26d0ce, #00bcd4);
-  background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4);
-  background: linear-gradient(135deg, #2193b0, #6dd5ed, #00bcd4);
-  background: linear-gradient(135deg, #141E30, #243B55, #00bcd4);
-  background: linear-gradient(135deg, #141E30, #243B55, #00bcd4, #243B55, #141E30);*/
-  /* 🎨 Animated gradient background */
-  /*background: linear-gradient(135deg, #0f2027, #203a43, #00bcd4, #203a43, #0f2027);/* Direction of the gradient (diagonal) */  
-  background: linear-gradient(135deg, #0f2027, #203a43, #4fc3f7, #203a43, #0f2027);/* Direction of the gradient (diagonal) */  
-  background-size: 500% 500%; /* Make the background 5x larger for smooth animation movement */
-  animation: gradientLoop 20s ease-in-out infinite;  /*- Duration: 20 seconds per cycle - Timing: ease-in-out for smooth transitions*/
+  height: 100vh; /* 200vh, auto, Make the body take up the full viewport height */
+  display: flex; /*flex, grid, Enable flexbox layout for easy vertical stacking of elements */
+  flex-direction: column; /*row, column,Stack child elements (header, content, footer) vertically */
+  background: linear-gradient(135deg, #0f2027, #203a43, #4fc3f7, #203a43, #0f2027);/* Direction of the gradient background 🎨 (diagonal) */  
+  background-size: 800% 800%; /* Make the background 5x larger for smooth animation movement */
+  animation: gradientLoop 30s ease-in-out infinite;  /*- Duration: 20 seconds per cycle - Timing: ease-in-out for smooth transitions*/
   color: white; /* Default text color across the site */
   font-family: 'Poppins', sans-serif;/* Clean, modern font with sans-serif fallback */
   overflow-x: hidden; /* Prevent horizontal scrolling caused by animation shifts */
@@ -34,27 +25,33 @@ body {
  🧭 HEADER & NAVIGATION
 ========================================================= */
 header.top-bar {
-  position: fixed; /* Keeps the header fixed at the top while scrolling */
-  top: 0; /* Positions it at the very top of the page */
-  left: 0; /* Aligns it to the left edge */
+  position: fixed; /* static, relative, absolute, sticky, fixed, Keeps the header fixed at the top while scrolling */
+  top: 2px; /* Positions it at the very top of the page */
+  left: 2px; /* Aligns it to the left edge */
   width: 100%; /* Makes the header span the full width of the screen */
-  height: 50px; /* Sets the height of the header */
+  height: 40px; /* Sets the height of the header */
   /*background: rgba(255, 255, 255, 0.1);*/ /* Optional semi-transparent background */
   display: flex; /* Uses Flexbox for screen size changes layout */ 
-  align-items: center; /* Vertically centers content inside the header */
-  justify-content: center; /* Horizontally centers the menu */
-  padding: 40px 40px; /* Adds horizontal spacing inside the header */
+  align-items: center; /* Vertically centers content inside the header, 'flex-start` (top) or `flex-end` (bottom) */
+  justify-content: center; /*space-between, center, flex-start, flex-end, Horizontally centers the menu */
+  padding: 30px 30px; /* Adds horizontal spacing inside the header */
   backdrop-filter: blur(10px); /* Adds a frosted-glass blur effect */
   z-index: 10; /* Ensures the header stays above other elements */
-  box-sizing: border-box; /* Includes padding in total width/height */
+  box-sizing: border-box; /* content-box, 
+  Includes padding in total width/height */
+  
+   flex-direction: column; /* Stacks logo and menu vertically instead of side-by-side */
+    height: auto; /* Allows height to adjust based on content */
+    padding: 20px 20px; /* Adds smaller, consistent padding for compact layout */
+  
 }
 
 /* Logo */
 .top-bar .logo {
-  position: absolute; /* Places the logo independently inside the header */
+  position: fixed; /* Places the logo independently inside the header */
   left: 7%; /* Positions it 40px from the left edge */
   right: 2%; /* Keeps some space from the right edge (optional) */
-  top: 27%; /* Positions it 10px from the top edge */
+  /*top: 10%; /* Positions it 10px from the top edge */
   /*text-transform: uppercase; /* Invalid CSS (should be text-transform: uppercase if needed) */
   /*display: flex; /* Uses Flexbox for arranging text lines */
   flex-direction: column; /* Stacks "Wassim" and "El Madina" vertically */
@@ -72,19 +69,26 @@ header.top-bar {
 
 /* --- Logo text lines --- */
 .logo .line1 {
-  font-weight: 700; /* Makes "Wassim" bold for emphasis */
+  /*font-family: "Satisfy", cursive; /* Satisfy is a script, use cursive fallback */
+  font-family: "Poppins", sans-serif;
+  /*font-family: "Licorice", cursive;*/
+  font-weight: 400; /* Makes "Wassim" bold for emphasis */
   color: #ffffff; /* Sets text color to white for visibility */
 }
 
 .logo .line2 {
-  font-weight: 600; /* Slightly lighter weight for "El Madina" */
+  /*font-family: 'Pacifico', cursive; /* Pacifico is a script, use cursive fallback */
+  font-family: "Pacifico", cursive; /*Licorice, Pacifico, Satisfy, BBH Sans Hegarty*/
+  font-weight: 400; /* Slightly lighter weight for "El Madina" */
+  /*font-style: normal;*/
   color: #333; /* Dark gray to create a soft contrast */
 }
 
 /* --- Menu Layout --- */
 .menu {
+  top : 70%; /* Vertically centers the menu within the header */
   display: flex; /* Uses Flexbox to arrange links horizontally */
-  gap: 40px; /* Adds 40px spacing between each menu link */
+  gap: 30px; /* Adds 40px spacing between each menu link */
   justify-content: center; /* Centers menu links horizontally */
   align-items: center; /* Vertically aligns links in the middle */
 }
@@ -137,7 +141,7 @@ header.top-bar {
   justify-content: center; /* Horizontally centers the model */
   align-items: center; /* Vertically centers the model */
   width: 95%; /* Makes the container take 95% of the page width */
-  height: 70vh; /* Sets the height to 50% of the viewport height */
+  height: 60%; /* Sets the height to 50% of the viewport height */
   background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for contrast */
   border-radius: 25px; /* Smooth, rounded corners */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adds depth with a soft shadow */
@@ -156,7 +160,7 @@ model-viewer {
  ⚓ FOOTER
 ========================================================= */
 footer.site-footer {
-  position: fixed; /* Keeps the footer always visible at the bottom of the screen */
+  /*position: relative; /* Keeps the footer always visible at the bottom of the screen */
   bottom: 0; /* Anchors it to the bottom edge */
   width: 100%; /* Stretches the footer across the full page width */
   background: rgba(255, 255, 255, 0.1); /* Adds a transparent white background for a glassy look */
@@ -168,19 +172,6 @@ footer.site-footer {
   z-index: 10; /* Ensures the footer stays above background or model layers */ 
 }
 
-
-/* =========================================================
- 📄 EMBEDDED PAGES (IFRAME)
-========================================================= */
-iframe {
-  border: none; /* Removes the default border around the iframe for a cleaner look */
-  flex: 1; /* Allows the iframe to expand and fill available vertical space in the layout */
-  margin-top: 70px; /* Adds space at the top to avoid overlapping with the fixed header */
-  margin-bottom: 60px; /* Adds space at the bottom to prevent overlap with the footer */
-  width: 100%; /* Makes the iframe stretch across the full page width */
-}
-
-
 /* =========================================================
  📱 RESPONSIVE DESIGN (MOBILE)
 ========================================================= */
@@ -189,7 +180,7 @@ iframe {
   header.top-bar {
     flex-direction: column; /* Stacks logo and menu vertically instead of side-by-side */
     height: auto; /* Allows height to adjust based on content */
-    padding: 10px 20px; /* Adds smaller, consistent padding for compact layout */
+    padding: 20px 20px; /* Adds smaller, consistent padding for compact layout */
   }
 
   .logo {
@@ -214,9 +205,23 @@ iframe {
 
   .rectangle {
     width: 95%; /* Keeps model container nearly full width */
-    height: 35vh; /* Shortens height to fit smaller viewports */
+    height: 60%; /* Shortens height to fit smaller viewports */
   }
 }
+
+
+/* =========================================================
+ 📄 EMBEDDED PAGES (IFRAME)
+========================================================= */
+iframe {
+  border: none; /* Removes the default border around the iframe for a cleaner look */
+  flex: 1; /* Allows the iframe to expand and fill available vertical space in the layout */
+  margin-top: 70px; /* Adds space at the top to avoid overlapping with the fixed header */
+  margin-bottom: 0px; /* Adds space at the bottom to prevent overlap with the footer */
+  width: 100%; /* Makes the iframe stretch across the full page width */
+}
+
+
 
 /*###############################################################################################################################*/
 
