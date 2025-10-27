@@ -7,7 +7,12 @@ document.getElementById("header").innerHTML = `
       <div class="line1">Wassim</div>
       <div class="line2">El Madina</div>
     </div>
-    <nav class="menu">
+
+    <!-- Hamburger Icon (visible only on small screens) -->
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <!-- Navigation Menu -->
+    <nav class="menu" id="menu">
       <a href="javascript:void(0)" onclick="loadPage('home_edit')">Home</a>
       <a href="javascript:void(0)" onclick="loadPage('projects_edit')">Projects</a>
       <a href="#" onclick="loadPage('about_edit')">About</a>
