@@ -1,8 +1,6 @@
 // Header (top menu)
 document.getElementById("header").innerHTML = `
   <header class="top-bar">
-    <!--<img src="src/Test_Logo.png" alt="Logo" class="logo">-->
-    <!--<div class="logo">Wassim El Madina</div>-->
     <div class="logo">
       <div class="line1">Wassim</div>
       <div class="line2">El Madina</div>
@@ -12,8 +10,8 @@ document.getElementById("header").innerHTML = `
     <div class="menu-toggle" id="menuToggle">☰</div>
 
     <nav class="menu" id="menu">
-      <a href="javascript:void(0)" onclick="loadPage('home')">Home</a>
-      <a href="javascript:void(0)" onclick="loadPage('projects')">Projects</a>
+      <a href="#" onclick="loadPage('home')">Home</a>
+      <a href="#" onclick="loadPage('projects')">Projects</a>
       <a href="#" onclick="loadPage('about')">About</a>
       <a href="#" onclick="loadPage('contact')">Contact</a>
     </nav>
