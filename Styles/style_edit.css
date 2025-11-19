@@ -84,7 +84,7 @@ header.top-bar {
 .menu {
   display: flex;
   gap: 30px;
-  position: absolute;
+  /*position: absolute;*/
   top: 60px;
   right: 0;
 }
