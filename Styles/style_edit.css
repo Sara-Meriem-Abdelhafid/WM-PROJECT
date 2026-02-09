@@ -81,8 +81,9 @@ header.top-bar {
 }
 
 .logo_image {
-  width: 80px;   /* change this value */
+  width: 60px;/* change this value */
   height: auto; /* keeps aspect ratio */
+  margin-right: 15px;
 }
 
 .menu {
