@@ -18,5 +18,13 @@
   "contact_desc": "We’d love to hear from you. Reach out for partnerships, project inquiries, or general questions.",
   "contact_location": "📍 Annaba, Algeria",
   "contact_phone": "📞 +213 660 39 77 65",
-  "contact_email": "✉️ welmadina75@gmail.com"
+  "contact_email": "✉️ welmadina75@gmail.com",
+  "prototype_title": "Primitive 3D Prototype",
+  "prototype_desc":  "This model represents an early-stage 3D prototype developed to visualize the structural concept, proportions, and spatial configuration before final engineering.",
+  "gallery_title":"Gallery from Real-World Simulation of the Design",
+  "Design Goals":"Design Goals",
+  "goals_1":"Improve pedestrian safety and accessibility",
+  "goals_2": "Adapt to different urban and rural environments",
+  "goals_3": "Reduce accident risks in high-traffic areas",
+  "goals_4": "Provide a scalable and maintainable infrastructure solution"
 }

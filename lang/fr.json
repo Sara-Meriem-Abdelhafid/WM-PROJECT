@@ -18,5 +18,13 @@
   "contact_desc": "Nous serions ravis de vous entendre. Contactez-nous pour des partenariats, des demandes de projet ou des questions générales.",
   "contact_location": "📍 Annaba, Algérie",
   "contact_phone": "📞 +213 660 39 77 65",
-  "contact_email": "✉️ welmadina75@gmail.com"
+  "contact_email": "✉️ welmadina75@gmail.com",
+  "prototype_title": "Prototype 3D préliminaire",
+  "prototype_desc":  "Ce modèle 3D représente un prototype préliminaire développé afin de visualiser le concept structurel, les proportions et la configuration spatiale avant la phase d’ingénierie finale.",
+  "gallery_title":"Galerie de simulation du design en conditions réelles",
+  "Design Goals":"Objectifs de conception",
+  "goals_1":"Améliorer la sécurité des piétons et l’accessibilité",
+  "goals_2": "S’adapter aux différents environnements urbains et ruraux",
+  "goals_3": "Réduire les risques d’accidents dans les zones à forte circulation",
+  "goals_4": "Proposer une solution d’infrastructure évolutive et facile à maintenir"
 }
