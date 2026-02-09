@@ -1,6 +1,7 @@
 // Header (top menu)
 document.getElementById("header").innerHTML = `
   <header class="top-bar">
+    <img src="src/logo_trensparent.png" alt="Logo" class="logo">
     <div class="logo">
       <div class="line1">Wassim</div>
       <div class="line2">El Madina</div>
