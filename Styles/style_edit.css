@@ -80,6 +80,10 @@ header.top-bar {
   font-weight: 100;
 }
 
+.logo_image {
+  width: 80px;   /* change this value */
+  height: auto; /* keeps aspect ratio */
+}
 
 .menu {
   display: flex;
