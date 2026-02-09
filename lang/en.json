@@ -23,8 +23,8 @@
   "prototype_desc":  "This model represents an early-stage 3D prototype developed to visualize the structural concept, proportions, and spatial configuration before final engineering.",
   "gallery_title":"Gallery from Real-World Simulation of the Design",
   "Design_Goals":"Our Project Goals",
-  "goals_1":"Improve pedestrian safety and accessibility",
-  "goals_2": "Adapt to different urban and rural environments",
-  "goals_3": "Reduce accident risks in high-traffic areas",
-  "goals_4": "Provide a scalable and maintainable infrastructure solution"
+  "goals_1":"✔ Improve pedestrian safety and accessibility",
+  "goals_2": "✔ Adapt to different urban and rural environments",
+  "goals_3": "✔ Reduce accident risks in high-traffic areas",
+  "goals_4": "✔ Provide a scalable and maintainable infrastructure solution"
 }
